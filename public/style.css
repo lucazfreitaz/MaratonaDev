@@ -1,0 +1,174 @@
+/*  
+CASCADING STYLESHEET
+*/
+
+/* ALINHAMENTOS, ESPAÇAMENTOS , 
+LARGURAS E ALTURAS */
+
+/* GLOBAL*/
+
+* {
+    /* Corrigindo uma propriedade padrao do CSS */
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /*FONTES*/
+    font-family: 'Roboto', sans-serif;
+    background-color: #F9F9F9;
+}
+
+h1, h2 {
+    color: #000000cc;
+}
+
+/* TITULOS */
+
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+
+.form h2 {
+    text-align: right;
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+/* ESTRUTURA  */
+
+header, main, footer {
+    /* alinhamento de textos */
+    text-align: center;
+}
+
+header, .form, main {
+    /* espaçamento com margin */
+    margin: 0 auto 70px;
+    /*limites dos elementos na página */
+    width: 90%;
+    max-width: 500px;
+}
+
+/* HEADER */
+
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #FF4F4F;
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    width: 120px;
+    margin: 70px 0;
+}
+
+header p {
+    font-size: 14px;
+}
+
+/* FORM */
+
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #FF4F4F;
+    padding: 16px 64px;
+}
+
+form input, form button {
+    /* largura */
+    width: 100%;
+    /*espaçamento */
+    margin-bottom: 4px;
+    /* Preenchimento */
+    padding: 8px 16px;
+    /* personalizando as bordas */
+    border-radius: 4px;
+    border: 1px #ffffff88 solid;
+}
+
+form input {
+    background-color: transparent;
+}
+
+form input::placeholder {
+    color: #ffffffaa;
+}
+
+form button {
+    font-weight: bold;
+}
+
+/* MAIN */
+
+main h2 span {
+    color: #ff4f4f;
+}
+
+main .donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blood::before {
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    /*Fazer a gotinha */
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    transform: rotate(+45deg);
+}
+
+.donor p {
+    margin-top: 24px;
+    margin-bottom:64px;
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #eee;
+}
+
+/* FUNCIONALIDADES COM JAVA SCRIPT*/
+
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}

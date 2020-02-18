@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- HTML 
+    
+    HYPERTEXT
+
+    Texto que contem links para outros documentos
+
+    MARKUP 
+    
+    texto que conterá marcações
+    <tags>
+    
+    LANGUAGE
+
+    Para me comunicar de certa maneira, Sintaxe especifica para escrita
+-->
+
+<html>
+
+<head>
+    <!-- São confiurações da minha página-->
+    <title>Doe sangue ! Doe vida !!</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Aqui vem todo o conteudo visivel para o usuário, dentro de certa página-->
+
+    <header>
+        <!--Conteudo do topo-->
+
+        <img class="logo" src="/logo.png" alt="Imagem de DOE">
+        <h2>A sua doação importa</h2>
+        <p>Até 3 vidas com uma doação</p>
+        <p>Mai sde 38.000 doações são necessárias todos os dias</p>
+        <p>Apenas 1,9% da população brasileira, doa sangue</p>
+        <button>Quero ajudar</button>
+    </header>
+    <section>
+        <!--Fomulario-->
+        <section class="form hide">
+            <h2>Entre na lista de doadores</h2>
+            <form action="/" method="POST" >
+                <input type="text" name="name" placeholder="Nome completo">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="blood" placeholder="Tipo sanguinio">
+                <button>Quero ajudar</button>
+
+            </form>
+
+
+        </section>
+    </section>
+    <main>
+        <!-- Conteudo central-->
+        <h2>Últimos <span>doadores</span> </h2>
+        <section class="donors">
+
+            {% for donor in donors %}
+
+            <div class="donor">
+                <div class="blood">{{donor.blood}}</div>
+                <p>{{donor.name}}</p>
+            </div>
+
+            {%endfor%}
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé-->
+        Com 💙💛 Lucas Freitas
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
