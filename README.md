@@ -1,4 +1,4 @@
-# MaratonaDev
+# MaratonaDev rocketseat
 #### Maratona de 2 dias em que o propósito era construir uma aplicação do zero.
 
 # Tecnologias utilizadas
